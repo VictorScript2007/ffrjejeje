@@ -142,29 +142,28 @@ local function showSentGiftToast(rawItemName)
     local sendingLabel = Instance.new("TextLabel", toastGui)
     sendingLabel.Size = UDim2.new(0, 700, 0, 35)
     sendingLabel.AnchorPoint = Vector2.new(0.5, 0)
-    sendingLabel.Position = UDim2.new(0.5, 0, 0, -100) -- Hidden above the absolute top
+    sendingLabel.Position = UDim2.new(0.5, 0, 0, -100)
     sendingLabel.BackgroundTransparency = 1
     sendingLabel.Font = Enum.Font.SourceSansBold
     sendingLabel.TextSize = 28
-    sendingLabel.TextColor3 = Color3.fromRGB(255, 255, 255) -- Pure White
+    sendingLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
     sendingLabel.TextStrokeTransparency = 0 
     sendingLabel.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
     sendingLabel.RichText = true 
     
-    -- EXACT COLOR MATCH: Soft, pale golden yellow from screenshot
-    local yellowHex = "rgb(255,238,122)"
-    sendingLabel.Text = "Sending gift <font color='".. yellowHex .."'>&lt;Permanent " .. cleanItemName .. "&gt;</font> to " .. targetName .. "..."
+    local goldHex = "#FFD700"
+    sendingLabel.Text = "Sending gift <font color='".. goldHex .."'>&lt;Permanent " .. cleanItemName .. "&gt;</font> to " .. targetName .. "..."
     
     --// NOTIFICATION 2: SUCCESS
     local successLabel = Instance.new("TextLabel", toastGui)
     successLabel.Size = UDim2.new(0, 700, 0, 35)
     successLabel.AnchorPoint = Vector2.new(0.5, 0)
-    successLabel.Position = UDim2.new(0.5, 0, 0, -100) -- Hidden above the absolute top
+    successLabel.Position = UDim2.new(0.5, 0, 0, -100)
     successLabel.BackgroundTransparency = 1
     successLabel.Font = Enum.Font.SourceSansBold
     successLabel.TextSize = 28
-    -- EXACT COLOR MATCH: Minty pastel green from screenshot
-    successLabel.TextColor3 = Color3.fromRGB(152, 255, 152) 
+
+    successLabel.TextColor3 = Color3.fromRGB(0, 255, 0) 
     successLabel.TextStrokeTransparency = 0 
     successLabel.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
     successLabel.Text = "Gift sent successfully!"
